@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #FFC3A0; 
+    --secondary-color: #FF677D; 
+    --accent-color: #FF3E4D; 
+    --background-color: #F8F1F2; 
+  }
+  
+  .headerContainer {
+    width: 100%;
+  }
+  
+
+  .addEmployeeContainer {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .addEmployeeContainer h2 {
+    color: var(--accent-color);
+  }
+  
+  .addEmployeeContainer .form-group {
+    margin: 10px 0;
+  }
+  
+  .addEmployeeContainer label {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .addEmployeeContainer input[type="text"],
+  .addEmployeeContainer input[type="email"],
+  .addEmployeeContainer input[type="tel"],
+  .addEmployeeContainer select,
+  .addEmployeeContainer button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .addEmployeeContainer input[type="file"] {
+    display: none;
+  }
+  
+  .addEmployeeContainer .file-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .addEmployeeContainer .file-input:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .addEmployeeContainer .error {
+    color: red;
+  }
+  
+  .addEmployeeContainer .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .addEmployeeContainer .submit-button:hover {
+    background-color: var(--secondary-color);
+  }
+
+.image-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .image-preview img {
+    border-radius: 100%;
+    width: 150px; 
+    height: 150px; 
+  }
+  
+  .image-preview button {
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,47 @@
+:root {
+  --cherry-blossom-bg: #fff1f3; 
+  --cherry-blossom-text: #8a80b9;
+  --cherry-blossom-button: #ff85a2;
+}
+
+.loginContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./../../Images/bg.jpg);
+  background-size: cover;
+  background-color: var(--cherry-blossom-bg);
+}
+.loginContainer form {
+  width: 25%;
+  height: 400px;
+  background-color: var(--cherry-blossom-bg);
+  border-radius: 5px;
+  text-align: center;
+}
+.loginContainer form h1 {
+  text-align: center;
+}
+.loginContainer .ant-input-affix-wrapper {
+  width: 70%;
+  padding: 10px;
+  margin: 20px;
+}
+.loginContainer button {
+  width: 70%;
+  height: 40px;
+  border: none;
+  background-color: var(--cherry-blossom-button);
+  color: white;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 30px;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+.loginContainer .errorSpan {
+  color: var(--cherry-blossom-text);
+}
