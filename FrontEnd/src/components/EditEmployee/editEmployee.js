@@ -21,6 +21,8 @@ function EditEmployee() {
   const [error, setError] = useState({});
   const { id } = useParams(); // Get the 'id' parameter from the route
   const navigate = useNavigate(); // A function to navigate to different routes
+  const [imagePreview, setImagePreview] = useState("");
+
 
   const emailRegex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
   const regexExp = /^[6-9]\d{9}/;
@@ -97,6 +99,7 @@ function EditEmployee() {
     reader.readAsDataURL(e.target.files[0]);
     reader.onload = () => {
       setAddEmployeeData({ ...addEmployeeData, img: reader.result });
+      setImagePreview(reader.result)
     };
     reader.onerror = (error) => {
       console.log("Error", error);
@@ -136,6 +139,7 @@ function EditEmployee() {
           error={error}
           selectDesi={selectDesi}
           coursecheck={coursecheck}
+          imagePreview={imagePreview}
           imageChange={imageChange}
         />
       </form>
