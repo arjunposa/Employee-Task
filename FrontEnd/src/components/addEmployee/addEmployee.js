@@ -113,9 +113,7 @@ function AddEmployee() {
       console.log("Error", error);
     };
   };
-  const deleImage = () => {
-    setImagePreview('')
-  };
+ 
   // Validation function to check form input
   const validate = (values) => {
     let errors = {};
@@ -162,14 +160,6 @@ function AddEmployee() {
     <div>
       <Header name="AddEmployee" />
       <form onSubmit={handleSubmit}>
-      {
-       imagePreview && (
-        <div className='image-preview'>
-          <img src={imagePreview} alt="Selected" />
-          <button onClick={deleImage}>Delete</button>
-        </div>
-      )}
-      
         <Cards
           name="addEmployee"
           addEmployeeData={addEmployeeData}
@@ -178,6 +168,7 @@ function AddEmployee() {
           error={error}
           selectDesi={selectDesi}
           coursecheck={coursecheck}
+          imagePreview={imagePreview}
           imageChange={imageChange}
         />
       </form>
