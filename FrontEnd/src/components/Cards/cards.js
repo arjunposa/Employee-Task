@@ -5,7 +5,10 @@ const initialState = { selected: "", selected1: "", selected2: "" };
 
 function Cards(props) {
   const [defaultDesignation, setDefaultDesignation] = useState(initialState);
-
+  const [image,setImage] = useState('')
+  useEffect(()=>{
+    setImage(props.imagePreview)
+  },[props.imagePreview])
   useEffect(() => {
     if (props.addEmployeeData.designation === "HR") {
       setDefaultDesignation({ ...defaultDesignation, selected: "selected" });
@@ -151,6 +154,15 @@ function Cards(props) {
               </td>
             </tr>
             <tr>
+              <td>Image Preview</td>
+              <td>
+              <div className='image-preview'>
+          <img src={image} alt="" />
+          <button onClick={()=>{setImage('')}}>Delete</button>
+        </div>
+              </td>
+            </tr>
+            <tr>
               <td>Img Upload</td>
               <td>
                 <input
@@ -164,8 +176,8 @@ function Cards(props) {
               </td>
             </tr>
           </tbody>
-          {props.name === "addEmployee" && <button>Add</button>}
-          {props.name === "editEmployee" && <button>Update</button>}
+          {props.name === "addEmployee" && <button className="btn1">Add</button>}
+          {props.name === "editEmployee" && <button className="btn2">Update</button>}
         </table>
       </fieldset>
     </div>
